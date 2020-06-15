@@ -1,0 +1,21 @@
+{
+    "name": "pritam-hajare/assignment",
+    "description": "A Test.",
+    "keywords":[
+        "robot"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pritam Hajare",
+            "email": "pritam.hajare@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Assignment\\": "src/"
+        }
+    }
+}
+
+
