@@ -162,6 +162,22 @@ class Timer {
     public function getCurrentTime() {
         return microtime( true );
     }
+
+    /**
+     * To Print Progress Bar on command line
+     * @param $done
+     * @param $total
+     * @param string $info
+     * @param int $width
+     * @return string
+     */
+    public function progress_bar($done, $total, $info="", $width=50) {
+        sleep(1);
+        $perc = round(($done * 100) / $total);
+        $bar = round(($width * $perc) / 100);
+        //echo "Per = ".$perc."-- Bar".$bar;
+        return sprintf("%s%%[%s>%s]%s\r", $perc, str_repeat("=", $bar), str_repeat(" ", $width-$bar), $info);
+    }
 }
 
 
